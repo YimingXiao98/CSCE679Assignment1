@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Monthly Temperature Matrix with Daily Sparklines</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <style>
+    body {
+      margin: 18px;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: #f7f9fc;
+      color: #18222f;
+    }
+
+    h2 {
+      margin: 0 0 14px 0;
+      font-weight: 600;
+    }
+
+    #tooltip {
+      position: absolute;
+      pointer-events: none;
+      background: rgba(255, 255, 255, 0.96);
+      color: #1a1a2e;
+      border: 1px solid #aab4c2;
+      border-radius: 5px;
+      padding: 6px 10px;
+      font-size: 12px;
+      line-height: 1.4;
+      opacity: 0;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      white-space: nowrap;
+    }
+
+    .axis text,
+    .legend-axis text {
+      font-size: 11px;
+      fill: #2c3d52;
+    }
+
+    .axis path,
+    .axis line,
+    .legend-axis path,
+    .legend-axis line {
+      stroke: #96a9bf;
+    }
+
+    .year-label,
+    .month-label {
+      font-size: 11px;
+      fill: #2c3d52;
+    }
+
+    .cell-border {
+      fill: none;
+      stroke: rgba(26, 41, 60, 0.30);
+      stroke-width: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <h2>Monthly Temperature Matrix with Daily Sparklines</h2>
+  <svg id="chart" width="1150" height="720"></svg>
+  <div id="tooltip"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
